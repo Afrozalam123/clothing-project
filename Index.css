@@ -1,0 +1,144 @@
+
+*{
+  margin: 0px;
+}
+body{
+  background-color: blueviolet;
+}
+nav {
+  background-color:whitesmoke;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+ul{
+  display: flex;
+  list-style-type: none;
+  position: relative;
+
+  gap: 40px;
+  cursor: pointer;
+  
+}
+li{
+  transition: color 0s ease-in-out 0s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+}
+ li:hover{
+  color:green;
+  text-shadow: 1px 1px 12px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+#log{
+  position: relative;
+  display: flex;
+  left: 40%;
+  font-family: cursive;
+  letter-spacing: 5px;
+top: -560px;
+transition: 0s ease-in-out 0s;
+
+}
+.container{
+  background-color: whitesmoke;
+  border: 2px solid black;
+  position: relative;
+  height: 510px;
+  width: 880px;
+  margin: 100px;
+ 
+  left: -100px;
+}
+.login{
+  position: relative;
+  display: flex;
+  left: 30%;
+  cursor: pointer;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#img{
+  height: 510px;
+  position: relative;
+  width: 500px;
+  overflow: hidden;
+}
+#heading{
+  position: relative;
+  display: flex;
+  top: -350px;
+  left:60px;
+  color: white;
+  letter-spacing: 5px;
+  transition:0s ease-in-out 2s;
+  cursor: pointer;
+
+}
+#heading:hover{
+color: red;
+}
+#para{
+  position: relative;
+  display: flex;
+  top: -340px;
+  left:60px;
+  color: white;
+}
+input[type="text"]{
+ 
+ position: relative;
+  display: flex;
+  top: -60vh;
+  left: 60%;
+ 
+  border-bottom: 1px solid whitesmoke;
+  font-weight: bolder;
+  height: 20px;
+  font-variant: normal;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+   border: 1px solid black;
+  border-radius: 10px;
+   
+}
+
+
+input[type="text2"]{
+  position: relative;
+  display: flex;
+  top: -58vh;
+  left: 60%;
+ 
+  border-bottom: 1px solid whitesmoke;
+  font-weight: bolder;
+  height: 20px;
+  font-variant: normal;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+   border: 1px solid black;
+  border-radius: 10px;
+}
+#user{
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  top: -450px;
+  position: relative;
+  display: flex;
+  color: brown;
+  left:90%;
+  right: -90px;
+}
