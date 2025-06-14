@@ -13,6 +13,7 @@ function Index() {
             <li>Home</li>
             <li>About</li>
             <li>contact us  </li>
+            <li>Log out</li>
       
           </ul>
         </nav>
