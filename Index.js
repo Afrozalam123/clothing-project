@@ -1,7 +1,7 @@
 import React from 'react'
 import "../Project/Index.css"
 import myimage from "../assests/myimg.png"
-import myuser from  "../assests/user.png"
+// import myuser from  "../assests/user.png"
 function Index() {
  
   return (
@@ -25,14 +25,24 @@ function Index() {
             <div className='login'>
              <h1 id='log'>Sign in!</h1>
             </div>
-             <div className='placeholder'>
-              <img src={myuser} alt='' id='user'/>
-              <input type='text' placeholder='Enter a Username or E-mail'/>
+             <div>
+              {/* <img src={myuser} alt='' id='user'/> */}
+              <input type='text' placeholder='Enter a Username'/>   
              </div>
              <div className='place'>
               <input type='text2'placeholder='Enter a pasword'/>
-              <input type='checkbox' placeholder='Remewmber me'/>
+  
+           </div>
+              <form>
+              <input type='checkbox' id='my-check'/>
+              <label id='test'>Remember me</label>
+             </form>
+             <div>
+              <p id='pas'>Forgot password?</p>
+             
              </div>
+              <button >Sign in</button>
+            
           
             
             
