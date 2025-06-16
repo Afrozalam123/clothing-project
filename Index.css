@@ -3,7 +3,7 @@
   margin: 0px;
 }
 body{
-  background-color: blueviolet;
+  background-color: rgb(97, 26, 164);
 }
 nav {
   background-color:whitesmoke;
@@ -182,10 +182,42 @@ input[type="text2"]{
 }
 button{
    display: flex;
-  top: -439px;
+  top: -400px;
   position: relative;
-  left: 79%;
-  height: 40px;
-  width: 80px;
+  left: 69%;
+  height: 44px;
+  width: 128px;
+  justify-content: center;
   text-align: center;
+   background-color: #007bff;
+   color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  transition: 0s ease-in-out 0s;
+  transition: background 0.3s ease-in-out;
+  border-radius: 10px;
+  
+}
+button:hover{
+background-color: #0056b3;
+}
+.black-part{
+  top: -400px;
+  position: relative;
+  left: 60%;
+  font-weight: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+
+}
+.red-part{
+  top: -400px;
+  position: relative;
+  left: 60%;
+  font-weight: 300px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #0056b3;
 }

@@ -1,8 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 import "../Project/Index.css"
 import myimage from "../assests/myimg.png"
 // import myuser from  "../assests/user.png"
+
 function Index() {
+  let [btnText,setBtnText]=useState('Sign in')
+
+  function handleClick(){
+    setBtnText('Sign up!')
+     setTimeout(()=>{
+      setBtnText('Sign in')
+     },2000)
+  }
  
   return (
     <div className='logo'>
@@ -41,10 +50,14 @@ function Index() {
               <p id='pas'>Forgot password?</p>
              
              </div>
-              <button >Sign in</button>
-            
-          
-            
+           
+              <button  onClick={handleClick}>{btnText}</button>
+             <div>
+              <h1>
+                <span className='black-part'>New here?</span>
+                <span className='red-part'>Create an Account</span>
+              </h1>
+             </div>
             
               
             
