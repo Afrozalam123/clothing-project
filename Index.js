@@ -1,18 +1,29 @@
-import React,{useState} from 'react'
+import React from 'react'
 import "../Project/Index.css"
 import myimage from "../assests/myimg.png"
+import { useForm } from "react-hook-form"
 // import myuser from  "../assests/user.png"
 
 function Index() {
-  let [btnText,setBtnText]=useState('Sign in')
+  const {
+      register,
+      handleSubmit,
+      watch,
+      formState: { errors },
+    } = useForm()
+  
 
-  function handleClick(){
-    setBtnText('Sign up!')
-     setTimeout(()=>{
-      setBtnText('Sign in')
-     },2000)
-  }
- 
+     function onSubmit(data){
+  console.log("Submitting my form",data)
+ }
+
+  
+  
+  // useEffect(() => {
+  // alert("welcome to my signing page")
+  // }, [btnText])
+  
+
   return (
     <div className='logo'>
       <div>
@@ -36,12 +47,15 @@ function Index() {
             </div>
              <div>
               {/* <img src={myuser} alt='' id='user'/> */}
-              <input type='text' placeholder='Enter a Username'/>   
-             </div>
-             <div className='place'>
-              <input type='text2'placeholder='Enter a pasword'/>
-  
+             <form onSubmit={handleSubmit(onSubmit)}>  
+              <input  {...register("UserName")}  placeholder='Entera a Username' type='text'/>
+            
+              <input {...register("password")}  type='text2' placeholder='Enter a password'/>
+
+              <input type='Submit'/>   
+             </form>
            </div>
+           
               <form>
               <input type='checkbox' id='my-check'/>
               <label id='test'>Remember me</label>
@@ -51,7 +65,7 @@ function Index() {
              
              </div>
            
-              <button  onClick={handleClick}>{btnText}</button>
+           
              <div>
               <h1>
                 <span className='black-part'>New here?</span>

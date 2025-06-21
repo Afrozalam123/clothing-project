@@ -2,9 +2,10 @@
 *{
   margin: 0px;
 }
-body{
+
+/* body{
   background-color: rgb(97, 26, 164);
-}
+} */
 nav {
   background-color:whitesmoke;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
@@ -180,7 +181,7 @@ input[type="text2"]{
   left: 79%;
   
 }
-button{
+input[type='submit']{
    display: flex;
   top: -400px;
   position: relative;
