@@ -34,7 +34,9 @@ function Index() {
             <li>About</li>
             <li>contact us  </li>
             <li>Log out</li>
-      
+          
+          
+            
           </ul>
         </nav>
       </div>
@@ -48,9 +50,9 @@ function Index() {
              <div>
               {/* <img src={myuser} alt='' id='user'/> */}
              <form onSubmit={handleSubmit(onSubmit)}>  
-              <input  {...register("UserName")}  placeholder='Entera a Username' type='text'/>
+              <input  {...register("UserName", { required: true, maxLength: 4 })}  placeholder='Entera a Username' type='text'/>
             
-              <input {...register("password")}  type='text2' placeholder='Enter a password'/>
+              <input {...register("password", { required: true,minLength:8})}        type='text2' placeholder='Enter a password'/>
 
               <input type='Submit'/>   
              </form>
