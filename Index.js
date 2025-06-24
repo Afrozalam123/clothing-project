@@ -8,7 +8,7 @@ function Index() {
   const {
       register,
       handleSubmit,
-      watch,
+      // watch,
       formState: { errors },
     } = useForm()
   
@@ -50,10 +50,18 @@ function Index() {
              <div>
               {/* <img src={myuser} alt='' id='user'/> */}
              <form onSubmit={handleSubmit(onSubmit)}>  
-              <input  {...register("UserName", { required: true, maxLength: 4 })}  placeholder='Entera a Username' type='text'/>
-            
+              <div className='form-control'>
+              <input  {...register("UserName", 
+                { required: true,
+                  minLength:{value:4,message:'min at least 4 character'},
+                 maxLength: 9 })}  placeholder='Entera a UserName' type='text'/>
+                 {errors.UserName && <p id='paragraph1'>{errors.UserName.message}</p>}
+                
+                </div>
+               <div>                
               <input {...register("password", { required: true,minLength:8})}        type='text2' placeholder='Enter a password'/>
-
+             
+             </div>
               <input type='Submit'/>   
              </form>
            </div>
