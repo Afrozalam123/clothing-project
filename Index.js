@@ -52,14 +52,22 @@ function Index() {
              <form onSubmit={handleSubmit(onSubmit)}>  
               <div className='form-control'>
               <input  {...register("UserName", 
+
                 { required: true,
-                  minLength:{value:4,message:'min at least 4 character'},
-                 maxLength: 9 })}  placeholder='Entera a UserName' type='text'/>
+                 
+                  minLength:{value:4,message:'min at least 4 character' },
+                 maxLength: {value:15, message:"UserName must  20 characters"} })}  placeholder='Entera a UserName' type='text'/>
                  {errors.UserName && <p id='paragraph1'>{errors.UserName.message}</p>}
                 
                 </div>
                <div>                
-              <input {...register("password", { required: true,minLength:8})}        type='text2' placeholder='Enter a password'/>
+              <input {...register("password", 
+
+                { required: true,
+                minLength:{value:8,message:"min at least 8 character"},
+               maxLength:{value:10,message:"password must 15 characters"}})}placeholder='Enter a password' 
+              type='text2'/>
+             {errors.password && <p id='paragraph'>{errors.password.message}</p>}
              
              </div>
               <input type='Submit'/>   

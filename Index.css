@@ -14,12 +14,13 @@ nav {
   top: 0;
   z-index: 1000;
   padding: 1rem 2rem;
-  
+ 
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
+
 ul{
   display: flex;
   list-style-type: none;
@@ -30,14 +31,16 @@ ul{
   
 }
 li{
-  transition: color 0s ease-in-out 0s;
+   transition: color 0.3s ease;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bolder;
   font-size: 20px;
+  color: #333333;
+  
 }
-  ul,li:hover{
-  background-color: beige;
-  color: chocolate;
+li:hover{
+  
+  Color: #0077cc;
          
 }
 #log{
@@ -233,5 +236,15 @@ color: burlywood;
   display: flex;
   left: 60%;
   color: red;
-    top: -420px;
+    top: -435px;
+    font-size: 20px;
+    
+}
+#paragraph{
+   position: relative;
+  display: flex;
+  left: 60%;
+  color:brown;
+    top: -416px;
+    overflow: hidden;
 }
