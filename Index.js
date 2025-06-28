@@ -9,11 +9,16 @@ function Index() {
       register,
       handleSubmit,
       // watch,
-      formState: { errors },
+      formState: { errors,isSubmitting },
     } = useForm()
   
 
-     function onSubmit(data){
+     async function onSubmit(data){
+      // Now calling Api data
+       await new Promise((resolve,) => {
+        setTimeout(resolve,5000) 
+       })
+
   console.log("Submitting my form",data)
  }
 
@@ -70,7 +75,10 @@ function Index() {
              {errors.password && <p id='paragraph'>{errors.password.message}</p>}
              
              </div>
-              <input type='Submit'/>   
+              <input type='Submit'  disabled={isSubmitting} 
+              value={isSubmitting ? "Submitting" : "Submit"}
+
+              />   
              </form>
            </div>
            
